@@ -1,0 +1,6 @@
+<h1> WOD CITY </h1>
+
+<% @workouts.each do |workout| %>
+  <h2> <%= link_to workout.date.strftime("%A,%B,%d"), workout %> </h2>
+  <h3> <%= workout.workout %>
+<% end %>
