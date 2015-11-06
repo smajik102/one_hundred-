@@ -1,0 +1,11 @@
+<h1> <%= @user.user_name %>'s Workouts </h1>
+
+<% @user.workouts.each do |w| %>
+  <h3> WOD </h3>
+  <h4> <%= w.date.strftime("%A,%B,%d") %>  </h4>
+  <h4> <%= w.workout %>  </h4>
+<% w.movements.each do |m| %>
+
+  <h4> Completed: <%= m.movement %> - <%= m.reps %>  </h4>
+  <% end %>
+<% end %>

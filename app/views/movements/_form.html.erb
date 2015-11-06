@@ -1,11 +1,10 @@
 <%= simple_form_for([@workout, @workout.movements.build]) do |f| %>
   <div class="form-group">
-    <select name="movement[movement_id]" class="form-control">
-    <%= options_from_collection_for_select(Movement.all, :id, :movement) %>
-   </select>
- </div>
+
+  <%= f.input :movement, input_html: { class: "form-control" } %> 
   <%= f.input :reps, input_html: { class: "form-control"} %>
   <br>
+ </div>
   <%= f.button :submit %>
 
 <% end %>

@@ -1,8 +1,7 @@
 class MovementsController < ApplicationController
   def create
     @workout = Workout.find(params[:workout_id])
-    @movement = Movement.find(params[:movement][:movement_id])
-    @workout.movements.push(@movement)
+    @movement = @workout.movements.create(params[:movement].permit(:movement, :reps))
 
     redirect_to workout_path(@workout)
   end

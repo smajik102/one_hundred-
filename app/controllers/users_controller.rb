@@ -26,7 +26,6 @@ before_action :authorize, except: [:index, :new, :create, :show]
   def add_workout
     @user = User.find(params[:id])
     @user.add_workout(workout)
-
   end
 
     private
