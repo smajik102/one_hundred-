@@ -1,0 +1,9 @@
+<h1> Be One.Hundred </h1>
+
+
+  <%= form_tag '/login' do %> >
+  username: <%= text_field_tag :user_name %> <br>
+  password: <%= password_field_tag :password %> <br>
+  <%= submit_tag "login" %> <br>
+  <%= link_to "Create a new user", "/users/new" %>
+<% end %>

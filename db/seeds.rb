@@ -6,5 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Movement.create(movement: 'pushup', reps: 0, points: 1, notes: 'https://www.youtube.com/watch?v=gAa-x7aevns' )
-Movement.create(movement: 'situp', reps: 0, points: 1, notes: 'https://www.youtube.com/watch?v=EhG_x1bLHwE' )
+User.create(user_name: 'Steve', password: 'test', password_confirmation: 'test')
+User.create(user_name: 'Sungwon', password: 'password', password_confirmation: 'password')
+User.create(user_name: 'Anthony', password: 'deadpool', password_confirmation: 'deadpool')

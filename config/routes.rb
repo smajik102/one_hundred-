@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
-  root 'workouts#index'
+  root 'sessions#new'
+
+  get '/login' => 'sessions#new', as: 'login'
+  post '/login' => 'sessions#create'
+  delete '/login' => 'sessions#destroy'
+
+  resources :users
+
 
   resources :workouts do
     resources :movements
-  end 
-end
+
+    delete 'movements' => 'movements#destroy', as: 'delete'
+  end
+
+
+  end
+  

@@ -1,7 +1,7 @@
 <%= simple_form_for([@workout, @workout.movements.build]) do |f| %>
   <div class="form-group">
-    <select class="form-control">
-      <option> <%= options_from_collection_for_select(Movement.all, :movement, :movement) %> </option>
+    <select name="movement[movement_id]" class="form-control">
+    <%= options_from_collection_for_select(Movement.all, :id, :movement) %>
    </select>
  </div>
   <%= f.input :reps, input_html: { class: "form-control"} %>

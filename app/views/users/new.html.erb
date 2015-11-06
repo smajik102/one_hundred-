@@ -1,0 +1,10 @@
+<h1> New Athlete </h1> 
+
+<%= simple_form_for(@user, html: {class: 'form-horizontal' }) do |f| %>
+  <%= f.input :user_name, label: "User Name" %>
+  <%= f.input :password, label: "Password", input_html: { class: "form-control"} %>
+  <%= f.input :password_confirmation, label: "Confirm Password", input_html: { class: "form-control"} %>
+  <br>
+  <%= f.button :submit %>
+
+  <% end %>
