@@ -4,6 +4,8 @@
   <% workout.users.each do |u| %>
   <h2> <%= link_to workout.date.strftime("%A,%B,%d"), workout %> </h2>
   <h3> <%= workout.workout%></h3>
-  <h3> Completed by: <%= u.user_name %> </h3>
+  <h3> Completed by: <%= link_to "#{u.user_name}", user_path(u.id)  %> </h3>
 <% end %>
 <% end %>
+
+  <button class="btn btn-default"> <%= link_to "Create a new workout", new_workout_path  %> </button>
