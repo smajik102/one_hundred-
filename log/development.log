@@ -31337,3 +31337,101 @@ Processing by WorkoutsController#index as HTML
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1[0m  [["workout_id", 8]]
   Rendered workouts/index.html.erb within layouts/application (10.9ms)
 Completed 200 OK in 155ms (Views: 152.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/workouts/13" for ::1 at 2015-11-07 21:55:42 -0500
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mWorkout Load (0.2ms)[0m  SELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = $1 LIMIT 1[0m  [["id", "13"]]
+  [1m[35mMovement Load (0.2ms)[0m  SELECT "movements".* FROM "movements" WHERE "movements"."workout_id" = $1  [["workout_id", 13]]
+  Rendered movements/_movement.html.erb (0.1ms)
+  Rendered movements/_form.html.erb (5.7ms)
+  Rendered workouts/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 138ms (Views: 136.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/workouts/12" for ::1 at 2015-11-07 21:55:45 -0500
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = $1 LIMIT 1  [["id", "12"]]
+  [1m[36mMovement Load (0.2ms)[0m  [1mSELECT "movements".* FROM "movements" WHERE "movements"."workout_id" = $1[0m  [["workout_id", 12]]
+  Rendered movements/_movement.html.erb (0.1ms)
+  Rendered movements/_form.html.erb (4.9ms)
+  Rendered workouts/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 153ms (Views: 151.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/workouts" for ::1 at 2015-11-07 21:59:03 -0500
+Processing by WorkoutsController#index as HTML
+  [1m[35mWorkout Load (0.4ms)[0m  SELECT "workouts".* FROM "workouts"  ORDER BY Created_at DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1[0m  [["workout_id", 13]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1  [["workout_id", 12]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1[0m  [["workout_id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "users_workouts" ON "users"."id" = "users_workouts"."user_id" WHERE "users_workouts"."workout_id" = $1  [["workout_id", 8]]
+  Rendered workouts/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 287ms (Views: 284.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/style.self-d17c7e7dcffe4ded05aaabf875044011dd39c41c2abf11d10f8299bc18bbec5f.css?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/application.self-dae5c5da7223ce739ad497817a3df9ba2fa2840da302653b11558b4f7d98bfc3.css?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/workouts.self-805e543fe47ee63fe5821534bc3a7bdd77f9b60625fd0a4e69d336997ebd3176.css?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-11-07 21:59:03 -0500
+
+
+Started GET "/assets/one_hundred_logo-1bc6d298459d2c2d9215295dd3009b3a2ea9941485c10c6bb6f5d05920ece231.png" for ::1 at 2015-11-07 21:59:03 -0500
