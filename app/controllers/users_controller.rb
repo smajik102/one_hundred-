@@ -8,6 +8,7 @@ before_action :authorize, except: [:index, :new, :create, :show]
 
   def show
     @user = User.find(params[:id])
+    @current_user = current_user
   end
 
   def new

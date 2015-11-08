@@ -1,0 +1,78 @@
+body {
+  background-image: url("100_bkgrd.jpg");
+  background-size: cover;
+}
+
+/*********
+SESSIONS */
+
+.session_form {
+  margin-left: 480px;
+}
+
+.logo {
+  margin-top: 250px;
+}
+
+#form_id {
+  padding-top: 20px;
+}
+
+.form {
+  color: #d7d7d7;
+}
+
+#button {
+  margin-left: 80px;
+}
+
+/*********
+NEW USER */
+
+#headline {
+  color: #d7d7d7;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.form-group {
+  color: #d7d7d7;
+  margin-left: 500px;
+  padding-top: 15px;
+  width: 50%;
+}
+
+/*********
+WORKOUT INDEX */
+
+.logo_workout {
+  margin-left: 500px;
+  margin-top: 20px;
+}
+
+.workout_container {
+  background-color: #000;
+  opacity: 0.6;
+  width: 600px;
+  height: auto;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-left: 325px;
+  border-radius: 10px;
+}
+
+#workout_link {
+  color: #fff;
+}
+
+#workout_name {
+  color: white;
+
+}
+
+#new_workout_button {
+  margin-top: 20px;
+  margin-left: 540px;
+  height: 50px;
+}

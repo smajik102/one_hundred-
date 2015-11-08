@@ -1,14 +1,11 @@
-<h1> WOD - <%= @workout.date.strftime("%A,%B,%d")%> </h1>
+<h1> <%= @workout.date.strftime("%A,%B,%d")%> </h1>
 
-<h3> WOD </h3> <br>
-<h4> <%= @workout.workout %>  </h4> <br>
+<h3> WOD: <%= @workout.workout %>  </h3> <br>
+<h3> Notes / Time: <%= @workout.notes %>  </h3> <br>
 
-<h3> Your Time </h3> <br>
-<h4> <%= @workout.notes %>  </h4>
-
-<%= link_to "Back", "/workouts" %>
-<%= link_to "Edit" , edit_workout_path(@workout) %>
-<%= link_to "Delete", "/workouts", method: :delete, data: { confirm: "are you sure you want to delete?"} %>
+<button class="btn btn-default"> <%= link_to "Back", "/workouts" %> </button>
+<button class="btn btn-default"> <%= link_to "Edit" , edit_workout_path(@workout) %>  </button>
+<button class="btn btn-default"> <%= link_to "Delete", workout_path(@workout), method: :delete, data: { confirm: "are you sure you want to delete?"} %>  </button>
 
   <h3> Log your workout </h4>
     <%= render partial: @workout.movements, locals: {workout_id: @workout.id} %>

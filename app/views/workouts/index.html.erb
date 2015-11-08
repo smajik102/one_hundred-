@@ -1,11 +1,14 @@
-<h1> WOD CITY </h1>
+<%= image_tag("one_hundred_logo.png", width: '250', height: '75', class: "logo_workout") %>
 
+<div class="workout_container">
 <% @workouts.each do |workout| %>
   <% workout.users.each do |u| %>
-  <h2> <%= link_to workout.date.strftime("%A,%B,%d"), workout %> </h2>
-  <h3> <%= workout.workout%></h3>
-  <h3> Completed by: <%= link_to "#{u.user_name}", user_path(u.id)  %> </h3>
-<% end %>
-<% end %>
 
-  <button class="btn btn-default"> <%= link_to "Create a new workout", new_workout_path  %> </button>
+  <h3><%= link_to workout.date.strftime("%A,%B,%d"), workout,{:style=>'color:#d8d624;'} %> </h3>
+  <h4 id="workout_name"> <%= workout.workout%> </h4>
+  <h5 id="workout_link"> Completed by: <%= link_to "#{u.user_name}", user_path(u.id)  %> </h5>
+<% end %>
+<% end %>
+</div>
+
+  <button class="btn btn-default" id="new_workout_button"> <%= link_to "Create a new workout", new_workout_path  %> </button>

@@ -1,9 +1,13 @@
-<h1> Be One.Hundred </h1>
+<div class ="session_form">
+
+<%= image_tag("one_hundred_logo.png", width: '220', height: '60', class: "logo") %>
 
 
-  <%= form_tag '/login' do %> >
-  username: <%= text_field_tag :user_name %> <br>
-  password: <%= password_field_tag :password %> <br>
-  <%= submit_tag "login" %> <br>
-  <%= link_to "Create a new user", "/users/new" %>
+<%= form_tag '/login', id: "form_id" do %>
+<p class="form"> Username <%= text_field_tag :user_name %> </p> <br>
+<p class="form"> Password  <%= password_field_tag :password %> </p> <br>
+<p id ="button"> <%= submit_tag "Login" %> <p>  <br>
+<p id="new_user_link"> <%= link_to "Create a new user", "/users/new",{:style=>'color:#ffffff;'} %> <p>
 <% end %>
+
+</div>

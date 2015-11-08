@@ -1,7 +1,7 @@
 <h1> <%= @user.user_name %>'s Workouts </h1>
 
 <% @user.workouts.each do |w| %>
-  <h4> <%= w.date.strftime("%A,%B,%d") %>  </h4>
+  <h4> <%= link_to w.date.strftime("%A,%B,%d"), w %>  </h4>
   <h4> WOD: <%= w.workout %>  </h4>
   <h4> Time / Notes: <%= w.notes %>  </h4>
 <% w.movements.each do |m| %>

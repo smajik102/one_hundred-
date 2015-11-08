@@ -35,6 +35,8 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 
 gem 'rails_12factor', group: :production
 
+gem 'leaderboard'
+
 group :development do
 
   gem 'web-console', '~> 2.0'

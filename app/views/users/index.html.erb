@@ -1,8 +1,12 @@
-<h1> Athletes </h1>
+<h1> Reps Leaderboard </h1>
 
-  <% @user.each do |user| %>
-<ul>
-  <li> <%= user.user_name %> </li>
-</ul>
+<% @user.each do |user| %>
+  <% user.workouts.each do |w| %>
+      <% w.movements.each do |m| %>
 
+      <%= user.user_name %> <%= m.reps %>
+
+
+ <% end %>
 <% end %>
+ <%end %>

@@ -1,7 +1,7 @@
 <%= simple_form_for(@workout, html: {class: 'form-horizontal' }) do |f| %>
   <%= f.input :date, label: "Date" %>
   <%= f.input :workout, label: "WOD", input_html: { class: "form-control"} %>
-  <%= f.input :notes, label: "Coaches Notes", input_html: { class: "form-control"} %>
+  <%= f.input :notes, label: "Notes / Time", input_html: { class: "form-control"} %>
   <br>
   <%= f.button :submit %>
 
