@@ -1,5 +1,7 @@
 class WorkoutsController < ApplicationController
+  before_action :authorize, except: [:index, :show]
   before_action :find_workout, only: [:show, :edit, :update, :destroy]
+
 
   def index
     @workouts = Workout.all.order("Created_at DESC")
