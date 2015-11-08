@@ -1,7 +1,9 @@
 body {
   background-image: url("100_bkgrd.jpg");
   background-size: cover;
+  width: 100%;
 }
+
 
 /*********
 SESSIONS */
@@ -47,7 +49,7 @@ WORKOUT INDEX */
 
 .logo_workout {
   margin-left: 500px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .workout_container {
@@ -56,8 +58,6 @@ WORKOUT INDEX */
   width: 600px;
   height: auto;
   text-align: center;
-  padding-top: 20px;
-  margin-top: 25px;
   margin-left: 325px;
   border-radius: 10px;
 }
@@ -68,11 +68,100 @@ WORKOUT INDEX */
 
 #workout_name {
   color: white;
-
 }
 
 #new_workout_button {
   margin-top: 20px;
   margin-left: 540px;
   height: 50px;
+}
+
+
+/***********************
+CREATE A NEW WORKOUT  */
+
+#workout_header{
+  color: #d8d624;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.workout_form {
+  color: #d7d7d7;
+  margin-left: 425px;
+  padding-top: 15px;
+  width: 75%;
+}
+
+#new_workout_btn{
+  margin-left: 425px;
+}
+
+/***********************
+SHOW WORKOUTS */
+
+#show_workout_header {
+  color: #d8d624;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#show_wod {
+  color: #d7d7d7;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#show_notes {
+  color: #d7d7d7;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#button_group {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.log_workout {
+  color: #d8d624;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.show_movement {
+  color: #d7d7d7;
+  text-align: center;
+}
+
+.movement_form {
+  width: 45%;
+  margin-right: 20px;
+
+}
+
+#movement_button {
+  text-align: center;
+  margin-left: 570px;
+}
+
+/***********************
+SHOW USERS  */
+
+#header_user {
+  color: #d8d624;
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+.user_workout {
+  color: #d7d7d7;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#user_button {
+  margin-left: 600px;
+  margin-top: 20px;
 }

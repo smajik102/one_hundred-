@@ -1,13 +1,15 @@
-<h1> <%= @user.user_name %>'s Workouts </h1>
+<h1 id="header_user"> <%= @user.user_name %>'s Workouts </h1>
 
-<% @user.workouts.each do |w| %>
-  <h4> <%= link_to w.date.strftime("%A,%B,%d"), w %>  </h4>
-  <h4> WOD: <%= w.workout %>  </h4>
-  <h4> Time / Notes: <%= w.notes %>  </h4>
-<% w.movements.each do |m| %>
+<div class="workout_container">
+  <% @user.workouts.each do |w| %>
+    <h3> <%= link_to w.date.strftime("%A,%B,%d"), w,{:style=>'color:#d8d624;'} %>  </h3>
+    <h4 class="user_workout"> WOD: <%= w.workout %>  </h4>
+    <h4 class="user_workout"> Time / Notes: <%= w.notes %>  </h4>
+  <% w.movements.each do |m| %>
 
-  <h4> Completed: <%= m.movement %> - <%= m.reps %>  </h4>
+<h4 class="user_workout"> Completed: <%= m.movement %> - <%= m.reps %>  </h4>
   <% end %>
-<% end %>
+  <% end %>
+</div>
 
-<button class="btn btn-default"> <%= link_to "Back", "/workouts" %> </button>
+<button class="btn btn-default" id="user_button"> <%= link_to "Back", "/workouts" %> </button>

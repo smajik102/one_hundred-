@@ -1,10 +1,13 @@
+
+
+<div class="movement_form">
 <%= simple_form_for([@workout, @workout.movements.build]) do |f| %>
-  <div class="form-group">
+    <%= f.input :movement, input_html: { class: "form-control" } %>
+    <%= f.input :reps, input_html: { class: "form-control"} %> <br>
 
-  <%= f.input :movement, input_html: { class: "form-control" } %> 
-  <%= f.input :reps, input_html: { class: "form-control"} %>
-  <br>
- </div>
-  <%= f.button :submit %>
+    <div id="movement_button">
+    <%= f.button :submit %>
+   </div>
 
+</div>
 <% end %>

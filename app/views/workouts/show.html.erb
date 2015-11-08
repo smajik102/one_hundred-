@@ -1,14 +1,18 @@
-<h1> <%= @workout.date.strftime("%A,%B,%d")%> </h1>
 
-<h3> WOD: <%= @workout.workout %>  </h3> <br>
-<h3> Notes / Time: <%= @workout.notes %>  </h3> <br>
+<h2 id="show_workout_header"> <%= @workout.date.strftime("%A,%B,%d")%> </h2>
 
-<button class="btn btn-default"> <%= link_to "Back", "/workouts" %> </button>
-<button class="btn btn-default"> <%= link_to "Edit" , edit_workout_path(@workout) %>  </button>
-<button class="btn btn-default"> <%= link_to "Delete", workout_path(@workout), method: :delete, data: { confirm: "are you sure you want to delete?"} %>  </button>
+<h4 id="show_wod"> WOD: <%= @workout.workout %>  </h4>
+<h4 id="show_notes"> Notes / Time: <%= @workout.notes %>  </h4>
 
-  <h3> Log your workout </h4>
-    <%= render partial: @workout.movements, locals: {workout_id: @workout.id} %>
+<div id ="button_group">
+  <button class="btn btn-default"> <%= link_to "Back", "/workouts" %> </button>
+  <button class="btn btn-default"> <%= link_to "Edit" , edit_workout_path(@workout) %>  </button>
+  <button class="btn btn-default"> <%= link_to "Delete", workout_path(@workout), method: :delete, data: { confirm: "are you sure you want to delete?"} %>  </button>
+</div>
 
-  <h3> Add A Movement </h3>
+<h3 class="log_workout"> Log your workout </h4>
+  <%= render partial: @workout.movements, locals: {workout_id: @workout.id} %>
+
+
+<h3 class="log_workout"> Add A Movement </h3>
     <%= render "movements/form" %>
