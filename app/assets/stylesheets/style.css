@@ -173,6 +173,12 @@ SHOW USERS  */
 /***********************
 EDIT WOD  */
 
+#edit_header {
+  color: #d8d624;
+  text-align: center;
+  margin-top: 100px;
+}
+
 #cancel_button {
   text-align: center;
 }
