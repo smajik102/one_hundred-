@@ -4,6 +4,9 @@ body {
   width: 100%;
 }
 
+.flash {
+  color: white;
+}
 
 /*********
 SESSIONS */
@@ -164,4 +167,16 @@ SHOW USERS  */
 #user_button {
   margin-left: 600px;
   margin-top: 20px;
+}
+
+
+/***********************
+EDIT WOD  */
+
+#cancel_button {
+  text-align: center;
+}
+
+#workout_button {
+  margin-left: 150px;
 }

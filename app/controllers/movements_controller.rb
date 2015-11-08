@@ -1,4 +1,5 @@
 class MovementsController < ApplicationController
+  
   def create
     @workout = Workout.find(params[:workout_id])
     @movement = @workout.movements.create(params[:movement].permit(:movement, :reps))

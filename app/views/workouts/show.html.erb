@@ -4,11 +4,13 @@
 <h4 id="show_wod"> WOD: <%= @workout.workout %>  </h4>
 <h4 id="show_notes"> Notes / Time: <%= @workout.notes %>  </h4>
 
+
 <div id ="button_group">
   <button class="btn btn-default"> <%= link_to "Back", "/workouts" %> </button>
   <button class="btn btn-default"> <%= link_to "Edit" , edit_workout_path(@workout) %>  </button>
   <button class="btn btn-default"> <%= link_to "Delete", workout_path(@workout), method: :delete, data: { confirm: "are you sure you want to delete?"} %>  </button>
 </div>
+
 
 <h3 class="log_workout"> Log your workout </h4>
   <%= render partial: @workout.movements, locals: {workout_id: @workout.id} %>
