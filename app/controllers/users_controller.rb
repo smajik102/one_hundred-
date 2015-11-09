@@ -16,10 +16,9 @@ before_action :authorize, except: [:index, :new, :create, :show]
   end
 
   def create
-    before_filter :require_login, except: [:new, :create]
     @user = User.new(user_params)
       if @user.save
-        redirect_to root_path
+        redirect_to "/workouts"
       else
         redirect_to "/users/new"
       end
