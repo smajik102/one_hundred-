@@ -193,3 +193,23 @@ NEW WOD  */
 #new_workout_btn {
   margin-left: 600px;
 }
+
+/***********************
+LEADERBOARD  */
+
+#leaderboard {
+  color: white;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#leaderboard_header {
+  color: #d8d624;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#header_leaderboard {
+  text-align: center;
+}

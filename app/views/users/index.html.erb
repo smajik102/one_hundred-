@@ -1,12 +1,16 @@
-<h1> Reps Leaderboard </h1>
-
-<% @user.each do |user| %>
-  <% user.workouts.each do |w| %>
-      <% w.movements.each do |m| %>
-
-      <%= user.user_name %> <%= m.reps %>
+<h1 id="leaderboard_header"> Reps Leaderboard </h1>
 
 
- <% end %>
-<% end %>
- <%end %>
+  <table class="table table-bordered" id="leaderboard">
+
+    <tr>
+      <th class="text-center"> Athlete Name </th>
+      <th class="text-center"> # of Reps </th>
+    </tr>
+    <tr>
+      <% @user.each do |user| %>
+      <td> <%= user.movements.sum("reps") %> </td>
+      <td> <%= user.user_name %> </td>
+    </tr>
+  <% end  %>
+  </table>
